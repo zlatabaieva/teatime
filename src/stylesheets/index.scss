@@ -1,22 +1,169 @@
-body.index {
-    background-color: #728D6E;
-    font-family: 'PT Root UI';
-    color: #FFFFFF;
-    margin-left: 20px;
-    h1{
-        font-size: 48px;
-        margin-top: 20px;
+@import 'vars';
+.body-index {
+  background-image: url('/src/images/blured_image.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 100vh;
+  min-height: 1000px;
+  position: relative;
+}
+
+.container {
+  padding: 0 5.86vw;
+}
+
+.plug {
+  position: relative;
+  max-width: 1893px;
+  margin: 0 auto;
+  width: 100%;
+  height: 100vh;
+  min-height: 1000px;
+
+  &__link {
+    float: right;
+    color: #fff;
+    font-family: 'TT Commons Pro Edu', sans-serif;
+    font-size: clamp(1.5rem, 1.3733rem + 0.6333vw, 2.122625rem);
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    text-decoration: none;
+    margin-top: 3.43vw;
+  }
+
+  &__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--white);
+  }
+
+  &__title {
+    font-size: clamp(6.25rem, 4.6734rem + 7.883vw, 14rem);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 99.99%; /* 224.049px */
+    font-family: 'Lemony Personal Use', serif;
+  }
+
+  &__subtitle {
+    font-size: clamp(1.5rem, 1.2076rem + 1.4622vw, 2.9375rem);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    font-family: 'TT Commons Pro Edu', sans-serif;
+  }
+}
+
+.email {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 116px;
+  width: 100%;
+  max-width: 678px;
+  z-index: 100;
+
+  &__label {
+    color: var(--white);
+    font-family: 'TT Commons Pro Edu', sans-serif;
+    //font-size: 47px;
+    font-size: clamp(1.125rem, 0.9779rem + 0.7357vw, 1.8483125rem);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: flex;
+    flex-direction: column;
+    gap: 3.17vw;
+  }
+
+  &__wrapper {
+    font-style: normal;
+    font-weight: 400;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  &__input {
+    color: var(--white);
+    font-family: 'TT Commons Pro Edu', sans-serif;
+    font-size: clamp(1.125rem, 0.9779rem + 0.7357vw, 1.8483125rem);
+    line-height: normal;
+    border-radius: 17.688px;
+    background: rgba(217, 217, 217, 0.3);
+    //padding: 1.16vw 0.9vw;
+    padding: 22px 0 22px 17px;
+    border: none;
+    outline: white;
+    width: 100%;
+
+    &::placeholder {
+      color: var(--white);
+      font-family: 'TT Commons Pro Edu', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: clamp(1.125rem, 0.9779rem + 0.7357vw, 1.8483125rem);
+      line-height: normal;
     }
-    h2{
-        font-size: 40px;
-        margin-top: 20px;
-    }
-    h3{
-        font-size: 24px;
-        margin-top: 20px;
-    }
-    h4{
-        font-size: 18px;
-        margin-top: 20px;
-    }
+  }
+
+  &__button {
+    padding: 0 0.9vw;
+    position: absolute;
+    z-index: 100;
+    right: 0;
+    top: 0;
+    color: var(--white);
+    font-family: 'TT Commons Pro Edu', sans-serif;
+    font-size: clamp(1.25rem, 1.1283rem + 0.6086vw, 1.8483125rem);
+    height: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 1024px) {
+  .email {
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 80vw;
+  }
+}
+
+.line1 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1.22vw;
+}
+
+.line2 {
+  position: absolute;
+  left: 9.77vw;
+  top: 0;
+  width: 16.48vw;
+}
+
+.line3 {
+  position: absolute;
+  top: 13.47vw;
+  right: 0;
+  width: 76.97vw;
+}
+
+.line4 {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 1.22vw;
+  z-index: -10;
 }

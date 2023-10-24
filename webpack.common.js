@@ -95,6 +95,7 @@ module.exports = {
     }),
 
     // Index
+
     new HtmlWebpackPlugin({
       template: './src/index.html',
       filename: './index.html'
@@ -102,67 +103,75 @@ module.exports = {
 
     // Section
     new HtmlWebpackPlugin({
-        template: './src/articles.html',
-        filename: './articles.html'
-      }),
+      template: './src/splash.html',
+      filename: './splash.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/about.html',
+      filename: './about.html'
+    }),
 
-      new HtmlWebpackPlugin({
-        template: './src/typesoftee.html',
-        filename: './typesoftee.html'
-      }),
+    new HtmlWebpackPlugin({
+      template: './src/articles.html',
+      filename: './articles.html'
+    }),
 
-      new HtmlWebpackPlugin({
-        template: './src/media.html',
-        filename: './media.html'
-      }),
+    new HtmlWebpackPlugin({
+      template: './src/typesoftee.html',
+      filename: './typesoftee.html'
+    }),
+
+    new HtmlWebpackPlugin({
+      template: './src/media.html',
+      filename: './media.html'
+    }),
 
     // Filtr
-       new HtmlWebpackPlugin({
-        template: './src/articles/podborki.html',
-        filename: './articles/podborki.html'
-      }),
+    new HtmlWebpackPlugin({
+      template: './src/articles/podborki.html',
+      filename: './articles/podborki.html'
+    }),
 
-      new HtmlWebpackPlugin({
-        template: './src/articles/sovety.html',
-        filename: './articles/sovety.html'
-      }),
+    new HtmlWebpackPlugin({
+      template: './src/articles/sovety.html',
+      filename: './articles/sovety.html'
+    }),
 
-      new HtmlWebpackPlugin({
-        template: './src/articles/rezepty.html',
-        filename: './articles/rezepty.html'
-      }),
+    new HtmlWebpackPlugin({
+      template: './src/articles/rezepty.html',
+      filename: './articles/rezepty.html'
+    }),
 
-      new HtmlWebpackPlugin({
-        template: './src/typesoftee/ferm.html',
-        filename: './typesoftee/ferm.html'
-      }),
+    new HtmlWebpackPlugin({
+      template: './src/typesoftee/ferm.html',
+      filename: './typesoftee/ferm.html'
+    }),
 
-      new HtmlWebpackPlugin({
-        template: './src/typesoftee/region.html',
-        filename: './typesoftee/region.html'
-      }),
+    new HtmlWebpackPlugin({
+      template: './src/typesoftee/region.html',
+      filename: './typesoftee/region.html'
+    }),
 
-      new HtmlWebpackPlugin({
-        template: './src/typesoftee/deystvie.html',
-        filename: './typesoftee/deystvie.html'
-      }),
+    new HtmlWebpackPlugin({
+      template: './src/typesoftee/deystvie.html',
+      filename: './typesoftee/deystvie.html'
+    }),
 
-      new HtmlWebpackPlugin({
-        template: './src/media/news.html',
-        filename: './media/news.html'
-      }),
+    new HtmlWebpackPlugin({
+      template: './src/media/news.html',
+      filename: './media/news.html'
+    }),
 
-      new HtmlWebpackPlugin({
-        template: './src/media/mesta.html',
-        filename: './media/mesta.html'
-      }),
+    new HtmlWebpackPlugin({
+      template: './src/media/mesta.html',
+      filename: './media/mesta.html'
+    }),
 
     // Article
-      new HtmlWebpackPlugin({
+    new HtmlWebpackPlugin({
       template: './src/typesoftee/ferm/black.html',
       filename: './typesoftee/ferm/black.html'
-      }),
-
+    }),
 
     // Partials
     new HtmlWebpackPartialsPlugin([

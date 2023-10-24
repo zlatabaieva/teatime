@@ -18,7 +18,7 @@
           <h1 class="plug__title">teatime</h1>
           <p class="plug__subtitle">Погрузись в мир чая</p>
         </div>
-        <form action="#" class="email">
+        <form id="my-form" action="https://formspree.io/f/mdojzwyp" method="POST" class="email">
           <label class="email__label" for="email">
             Узнай первым о запуске
             <div class="email__wrapper">
@@ -29,11 +29,44 @@
                 type="email"
                 placeholder="Ваш email"
               />
-              <button class="email__button">OK</button>
+              <button id="my-form-button" class="email__button">OK</button>
             </div>
           </label>
+          <p class="email__info" id="my-form-status"></p>
         </form>
       </div>
     </section>
+    <script>
+      var form = document.getElementById("my-form");
+      
+      async function handleSubmit(event) {
+        event.preventDefault();
+        var status = document.getElementById("my-form-status");
+        var data = new FormData(event.target);
+        fetch(event.target.action, {
+          method: form.method,
+          body: data,
+          headers: {
+              'Accept': 'application/json'
+          }
+        }).then(response => {
+          if (response.ok) {
+            status.innerHTML = "Спасибо за подписку!";
+            form.reset()
+          } else {
+            response.json().then(data => {
+              if (Object.hasOwn(data, 'errors')) {
+                status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+              } else {
+                status.innerHTML = "Что-то пошло не так."
+              }
+            })
+          }
+        }).catch(error => {
+          status.innerHTML = "Что-то пошло не так."
+        });
+      }
+      form.addEventListener("submit", handleSubmit)
+  </script>
   </body>
 </html>

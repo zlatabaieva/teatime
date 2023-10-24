@@ -128,6 +128,16 @@
     border: none;
     cursor: pointer;
   }
+
+  &__info {
+    color: var(--white);
+    font-family: 'TT Commons Pro Edu', sans-serif;
+    //font-size: 47px;
+    font-size: clamp(1.125rem, 0.9779rem + 0.7357vw, 1.8483125rem);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
 }
 
 @media (max-width: 1024px) {
